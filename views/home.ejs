@@ -1,0 +1,10 @@
+<%- include('partials/header.ejs'); -%>
+<h1>Home</h1>
+<%=home %>
+<% lis.forEach((e)=>{ %>
+  <%  var str = e.content;  %>
+  <%  var st = str.substr(0,100); st+="....";%>
+    <h1 > <%= e.title %> </h1>
+    <p ><%=st %> <a href="/posts/<%=e.title%>">read more</a></p>
+<% })%>
+<%- include('partials/footer.ejs'); -%>
